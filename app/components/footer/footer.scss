@@ -61,8 +61,15 @@
 	}
 }
 
+@include r(1219) {
+	.footer {
+		padding: 40px 0;
+	}
+}
+
 @include r(1023) {
 	.footer {
+		padding: 20px 0;
 		font-size: 15px;
 	}
 }

@@ -44,7 +44,7 @@ svg {
 .title {
 	text-align: center;
 	font-size: 60px;
-	line-height: 1.1;
+	line-height: 1;
 	color: #222222;
 	font-weight: 700;
 	@include r(1219){
@@ -99,4 +99,92 @@ svg {
 	&:hover {
 		background-color: #c05d01;
 	}
+}
+
+.input-box {
+	position: relative;
+	width: 100%;
+	flex: none;
+}
+
+.form-field {
+	font-family: "Roboto", sans-serif;
+	width: 100%;
+	max-width: 100%;
+	border-radius: 35px;
+	background-color: #ffffff;
+	border: none;
+	outline: none;
+	font-size: 17px;
+	padding: 25px 30px;
+	color: #444444;
+	transition: .5s;
+	&:hover,
+	&:focus{
+		box-shadow: inset 0 0 12px 4px rgba(34, 35, 39, 0.5);
+	}
+}
+
+input::-webkit-input-placeholder {color: #444444; font-size: 17px;}
+input::-moz-placeholder          {color: #444444; font-size: 17px;}
+input:-moz-placeholder           {color: #444444; font-size: 17px;}
+input:-ms-input-placeholder      {color: #444444; font-size: 17px;}
+
+
+
+.discount {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: none;
+	width: 100px;
+	height: 100px;
+	background-color: #ef4621;
+	border-radius: 50%;
+	border: 5px solid #ffffff;
+	&-box {
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+	.text-1,
+	.text-2{
+		display: inline-block;
+		color: #ffffff;
+	}
+	.text-1 {
+		font-size: 35px;
+		line-height: .9;
+		font-weight: 700;
+	}
+	.text-2 {
+		font-size: 17px;
+		line-height: 1;
+		font-weight: 500;
+	}
+}
+
+
+.product-box {
+	position: relative;
+	width: 100%;
+	max-width: 310px;
+	.pills {
+		position: absolute;
+		width: 100%;
+		max-width: 131px;
+		bottom: 0px;
+		left: -50px;
+	}
+	.discount {
+		position: absolute;
+		top: -50px;
+		right: -50px;
+		transform: rotate(-30deg);
+	}
+}
+
+
+.ever-popup.show {
+	display: none !important;
 }

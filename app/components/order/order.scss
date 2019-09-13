@@ -1,0 +1,68 @@
+.order {
+  position: relative;
+  padding: 120px 0;
+  background-color: #175088;
+  background-image: linear-gradient(to bottom, #393962 0%, #175088 100%);
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/light.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 770px;
+    height: 349px;
+  }
+  &-wrap {
+    position: relative;
+    max-width: 970px;
+    margin: 0 auto;
+  }
+  &-description {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  &-title {
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  &-subtitle {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  &-logo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 693px;
+    margin-bottom: 80px;
+  }
+  &-content {
+    position: relative;
+  }
+  &-product {
+    position: absolute;
+    top: -300px;
+    right: 0;
+    .pills {
+      z-index: 3;
+    }
+  }
+  &-form {
+    display: flex;
+    .input-box {
+      max-width: 306px;
+      margin-right: 20px;
+    }
+  }
+  &-info {
+    padding: 20px 35px;
+    border: 1px solid #7598b5;
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 50px;
+  }
+}
