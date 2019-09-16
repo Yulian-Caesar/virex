@@ -173,13 +173,13 @@ input:-ms-input-placeholder      {color: #444444; font-size: 17px;}
 		position: absolute;
 		width: 100%;
 		max-width: 131px;
-		bottom: 0px;
-		left: -50px;
+		bottom: 4px;
+		left: -44px;
 	}
 	.discount {
 		position: absolute;
-		top: -50px;
-		right: -50px;
+		top: -37px;
+		right: -41px;
 		transform: rotate(-30deg);
 	}
 }
@@ -187,4 +187,11 @@ input:-ms-input-placeholder      {color: #444444; font-size: 17px;}
 
 .ever-popup.show {
 	display: none !important;
+}
+
+
+@include r(1023) {
+	.form-field {
+		padding: 20px 35px;
+	}
 }
