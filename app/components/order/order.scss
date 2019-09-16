@@ -1,0 +1,418 @@
+.order {
+  position: relative;
+  padding: 112px 0 130px;
+  background-color: #175088;
+  background-image: linear-gradient(to bottom, #393962 0%, #175088 100%);
+  &-wrap {
+    position: relative;
+  }
+  &-description {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 108px;
+  }
+  &-title {
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  &-subtitle {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  &-logo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 693px;
+    margin-left: 65px;
+    margin-bottom: 80px;
+    &:before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/light.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      left: 7%;
+      top: 0;
+      width: 770px;
+      height: 349px;
+      z-index: -1;
+    }
+  }
+  &-content {
+    position: relative;
+    max-width: 970px;
+    margin: 0 auto;
+  }
+  &-product {
+    position: absolute;
+    top: -304px;
+    right: 41px;
+    .pills {
+      z-index: 3;
+    }
+  }
+  &-form {
+    display: flex;
+    .input-box {
+      max-width: 306px;
+      margin-right: 20px;
+    }
+  }
+  &-info {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #7598b5;
+    background: rgba(255, 255, 255, 0.2);
+    margin-bottom: 50px;
+  }
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding: 10px 40px;
+  &-title {
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 700;
+    margin-right: 50px;
+  }
+  &-wrap {
+    display: flex;
+  }
+  &-item {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+    &:not(:first-child) {
+      margin-left: 50px;
+      &:before {
+        content: ":";
+        position: absolute;
+        display: inline-block;
+        font-family: "Arial", sans-serif;
+        left: -30px;
+        top: 0;
+      }
+    }
+    span {
+      display: block;
+      line-height: 1;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 1;
+      font-weight: 400;
+      color: rgba(255, 255, 255, .7);
+      margin-top: 2px;
+    }
+  }
+}
+
+.price {
+  display: flex;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #658cad;
+  }
+  &-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 40px;
+    &_old {
+      align-items: center;
+    }
+    &_new {
+      background: #ffffff;
+    }
+  }
+  &-title {
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 5px;
+    &_old {
+      font-weight: 400;
+      color: rgba(255, 255, 255, .7);
+    }
+    &_new {
+      font-weight: 500;
+    }
+  }
+  &-content {
+    display: flex;
+    align-items: flex-end;
+    span {
+      display: inline-block;
+    }
+    &_old {
+      position: relative;
+      color: rgba(255, 255, 255, .5);
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 100%;
+        height: 1px;
+        background-color: #ffffff;
+      }
+      &:before {
+        transform: rotate(15deg);
+      }
+      &:after {
+        transform: rotate(-15deg);
+      }
+      .x_currency {
+        font-size: 17px;
+        font-weight: 400;
+      }
+    }
+    &_new {
+      color: #222222;
+      .x_currency {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    .x_price_previous {
+      font-size: 35px;
+      line-height: .9;
+      font-weight: 400;
+    }
+    .x_price_current {
+      font-size: 40px;
+      line-height: .9;
+      font-weight: 700;
+    }
+  }
+}
+
+@include r(1219) {
+  .order {
+    padding: 80px 0;
+    &-description {
+      margin-bottom: 100px;
+    }
+    &-title {
+      margin-bottom: 15px;
+    }
+    &-subtitle {
+      font-size: 22px;
+    }
+    &-logo {
+      margin-left: 0;
+      margin-bottom: 50px;
+      img {
+        position: relative;
+        left: -40px;
+      }
+    }
+    &-product {
+      top: -270px;
+      right: 30px;
+    }
+    &-info {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include r(1023) {
+  .order {
+    &-description {
+      margin-bottom: 20px;
+    }
+    &-title {
+      margin-bottom: 10px;
+    }
+    &-subtitle {
+      font-size: 20px;
+    }
+    &-content {
+      display: flex;
+      align-items: center;
+      &__box {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        width: 100%;
+        margin-left: 20px;
+      }
+    }
+    &-logo {
+      margin: 0 auto 20px;
+      &:before {
+        width: 650px;
+        height: 320px;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      img {
+        left: -30px;
+      }
+    }
+    &-product {
+      position: relative;
+      right: initial;
+      top: initial;
+      margin: 0 auto;
+      .discount {
+        width: 86px;
+        height: 86px;
+        border-width: 4px;
+      }
+    }
+    &-info {
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    &-form {
+      flex-direction: column;
+      .input-box {
+        max-width: 100%;
+        margin: 0 auto 15px;
+      }
+    }
+
+  }
+
+
+  .timer {
+    flex-direction: column;
+    padding: 10px 20px;
+    &-title {
+      font-size: 26px;
+      text-align: center;
+      margin: 0 auto 10px;
+    }
+    &-item {
+      font-size: 34px;
+    }
+  }
+
+  .price {
+    &:before {
+      width: 100%;
+      height: 1px;
+    }
+    &-item {
+      text-align: center;
+      width: 50%;
+      padding: 10px 20px;
+    }
+    &-content {
+      justify-content: center;
+    }
+  }
+
+}
+
+@include r(767) {
+  .order {
+    &-subtitle {
+      font-size: 18px;
+    }
+    &-logo {
+      &:before {
+        width: 510px;
+        height: 210px;
+        top: 20px;
+      }
+    }
+    &-product {
+      max-width: 280px;
+      .discount {
+        right: -15px;
+      }
+      .pills {
+        max-width: 115px;
+        left: -10px;
+      }
+    }
+    &-content {
+      &__box {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+@include r(639) {
+  .order {
+    &-subtitle {
+      br {
+        display: none;
+      }
+    }
+    &-logo {
+      max-width: 400px;
+      margin-bottom: 55px;
+      &:before {
+        height: 160px;
+      }
+      img {
+        left: -20px;
+      }
+    }
+    &-content {
+      z-index: 2;
+      flex-direction: column;
+      &__box {
+        margin: 0 auto;
+      }
+    }
+    &-product {
+      margin-bottom: 20px;
+      .discount {
+        width: 78px;
+        height: 78px;
+      }
+    }
+    &-discount {
+      .text-1 {
+        font-size: 30px;
+      }
+      .text-2 {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include r(479) {
+  .order {
+    &-subtitle {
+      font-size: 16px;
+    }
+    &-logo {
+      max-width: 300px;
+      &:before {
+        height: 130px;
+        top: 0;
+      }
+      img {
+        left: -10px;
+      }
+    }
+  }
+}
