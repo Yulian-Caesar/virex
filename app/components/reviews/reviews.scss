@@ -1,20 +1,38 @@
 .reviews {
   padding: 125px 0;
   &-title {
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
   &-wrap {
-    padding: 30px;
     background-color: #efefef;
     counter-reset: section;
+    height: 424px;
+  }
+  &-inner {
+    padding: 30px;
   }
   &-item {
     display: flex;
+    flex-direction: column;
+    &:not(:first-child) {
+      margin-top: 38px;
+    }
+    &.open {
+      .reviews-content__text {
+        display: block;
+      }
+      .reviews-content__button:before {
+        content: "Скрить";
+      }
+    }
   }
   &-info {
     display: flex;
-    flex: 1px;
-    margin-right: 20px;
+    align-items: center;
+    width: 100%;
+    max-width: 250px;
+    flex: none;
+    margin-right: 50px;
     &__img {
       flex: none;
       max-width: 66px;
@@ -26,47 +44,256 @@
     &__content {
       display: flex;
       flex-direction: column;
+      overflow: hidden;
+      max-width: 100%;
     }
     &__name {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
       color: #000000;
       font-size: 20px;
-      line-height: 1;
+      line-height: 1.4;
       margin-bottom: 5px;
     }
     &__city {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
       color: #666666;
       font-size: 18px;
       line-height: 1;
     }
   }
   &-content {
-    width: 100%;
-    max-width: 840px;
     &__header {
       display: flex;
-      justify-content: space-between;
+      align-items: center;
     }
     &__title {
       color: #222222;
       font-size: 24px;
       line-height: 1;
       font-weight: 500;
-      max-width: 300px;
+      max-width: 320px;
     }
     &__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       max-width: 200px;
+      color: #666666;
+      font-size: 18px;
+      line-height: 1;
       border-radius: 22px;
       border: 1px solid #666666;
       background: transparent;
+      font-weight: 400;
+      margin-left: auto;
+      padding: 14px 10px;
       &:hover {
         background: $accentColor;
         border-color: $accentColor;
+        color: #ffffff;
+      }
+      &:before {
+        content: "Читать полностью";
+        display: inline-block;
       }
     }
     &__counter {
+      text-align: right;
+      color: #7a7b88;
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 500;
+      margin-left: 73px;
+      width: 100%;
+      max-width: 35px;
       &::before{
         counter-increment: section;
         content: "# " counter(section);
+        white-space: nowrap;
+      }
+    }
+    &__text {
+      display: none;
+      width: 100%;
+      max-width: 840px;
+      margin-top: 30px;
+      margin-left: auto;
+      background-color: #ffffff;
+      padding: 26px  30px;
+      color: #666666;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+}
+
+
+.reviews #mCSB_1_scrollbar_vertical .mCSB_dragger {
+  height: 60px!important;
+}
+
+.reviews .mCSB_scrollTools .mCSB_draggerRail {
+  width: 10px;
+  border-radius: 0;
+}
+
+.reviews .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  width: 8px;
+  background-color: #34639b;
+  background-image: linear-gradient(to bottom, #393962 0%, #175088 100%);
+}
+
+.reviews .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar:after {
+  background: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0) 3px,#fff 3px,#fff 4px);
+  left: 2px;
+}
+
+.reviews .mCSB_scrollTools {
+  width: 10px;
+}
+
+.reviews .mCSB_inside>.mCSB_container {
+  margin: 0;
+}
+
+
+@include r(1219) {
+  .reviews {
+    padding: 80px 0;
+    &-title {
+      margin-bottom: 40px;
+    }
+    &-inner {
+      padding: 20px 30px 20px 20px;
+    }
+    &-item {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+    &-content {
+      &__counter {
+        margin-left: 50px;
+      }
+      &__text {
+        margin-top: 20px;
+        padding: 20px;
+        max-width: 100%;
+      }
+    }
+    &-info {
+      margin-right: 20px;
+      &__img {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+@include r(1023) {
+  .reviews {
+    &-title {
+      margin-bottom: 20px;
+    }
+    &-inner {
+      padding: 10px 20px 10px 10px;
+    }
+    &-info {
+      max-width: 200px;
+      margin-right: 10px;
+      &__img {
+        max-width: 60px;
+      }
+      &__name {
+        font-size: 16px;
+        line-height: 1;
+      }
+      &__city {
+        font-size: 16px;
+      }
+    }
+    &-content {
+      &__title {
+        font-size: 20px;
+        margin-right: 20px;
+      }
+      &__button {
+        font-size: 16px;
+        max-width: 180px;
+        padding: 10px;
+      }
+      &__counter {
+        max-width: 33px;
+        font-size: 14px;
+        margin-left: 10px;
+      }
+      &__text {
+        padding: 10px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@include r(767) {
+  .reviews {
+    &-info {
+      &__img {
+
+      }
+    }
+    &-content {
+      &__header {
+        position: relative;
+        flex-wrap: wrap;
+      }
+      &__title {
+        font-size: 18px;
+        max-width: calc(100% - 245px);
+        width: 100%;
+        margin: 0;
+        line-height: 1.2;
+      }
+      &__button {
+        max-width: 180px;
+        margin: 10px auto 0;
+      }
+      &__counter {
+        position: absolute;
+        right: 0;
+        top: 25px;
+        max-width: 100%;
+        width: auto;
+      }
+      &__text {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@include r(639) {
+  .reviews {
+    &-info {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 0 5px 0;
+      padding-right: 30px;
+      &__img {
+        max-width: 54px;
+      }
+    }
+    &-content {
+      &__title {
+        max-width: 100%;
+        width: 100%;
+      }
+      &__counter {
+        top: 18px;
       }
     }
   }
