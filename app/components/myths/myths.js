@@ -1,10 +1,6 @@
-const buttons = document.querySelectorAll(".myths__button-show");
+let mythsToggle = function () {
+    $(this).parents(".myths__item-box").toggleClass("-open-answer");
+    $(this).toggleClass("-minus");
+};
 
-for ( let i = 0; i < buttons.length; i++) {
-
-    buttons[i].onclick = function () {
-        buttons[i].classList.toggle("-minus");
-        this.parentElement.classList.toggle("open-answer");
-    }
-
-}
+$(document).on("click", ".myths__button-show", mythsToggle);
