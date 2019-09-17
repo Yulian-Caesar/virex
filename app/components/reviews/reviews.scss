@@ -1,0 +1,73 @@
+.reviews {
+  padding: 125px 0;
+  &-title {
+    margin-bottom: 55px;
+  }
+  &-wrap {
+    padding: 30px;
+    background-color: #efefef;
+    counter-reset: section;
+  }
+  &-item {
+    display: flex;
+  }
+  &-info {
+    display: flex;
+    flex: 1px;
+    margin-right: 20px;
+    &__img {
+      flex: none;
+      max-width: 66px;
+      margin-right: 20px;
+      img {
+        border-radius: 50%;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+    }
+    &__name {
+      color: #000000;
+      font-size: 20px;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+    &__city {
+      color: #666666;
+      font-size: 18px;
+      line-height: 1;
+    }
+  }
+  &-content {
+    width: 100%;
+    max-width: 840px;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title {
+      color: #222222;
+      font-size: 24px;
+      line-height: 1;
+      font-weight: 500;
+      max-width: 300px;
+    }
+    &__button {
+      max-width: 200px;
+      border-radius: 22px;
+      border: 1px solid #666666;
+      background: transparent;
+      &:hover {
+        background: $accentColor;
+        border-color: $accentColor;
+      }
+    }
+    &__counter {
+      &::before{
+        counter-increment: section;
+        content: "# " counter(section);
+      }
+    }
+  }
+}
