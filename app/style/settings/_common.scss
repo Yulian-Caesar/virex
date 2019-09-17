@@ -189,9 +189,11 @@ input:-ms-input-placeholder      {color: #444444; font-size: 17px;}
 	display: none !important;
 }
 
+::-ms-clear { display: none; }
 
 @include r(1023) {
 	.form-field {
 		padding: 20px 35px;
 	}
 }
+
