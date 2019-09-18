@@ -13,4 +13,5 @@ let menuToggle = function () {
 
 $(document).on('click', '.menu-toggle', menuToggle);
 $(document).on('click', '.menu-mobile__button', menuToggle);
+$(document).on('click', '.menu-mobile__link', menuToggle);
 
