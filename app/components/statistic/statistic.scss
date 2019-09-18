@@ -9,7 +9,6 @@
   }
   &__subtitle {
     margin: 29px auto 64px;
-    padding-right: 12px;
     font-size: 24px;
     line-height: 1.2;
     font-weight: 400;
@@ -155,6 +154,9 @@
       border: 1px solid #d9d9d9;
       padding: 20px;
     }
+    &__main-item-title {
+      padding-left: 0;
+    }
     &__methods {
       max-width: 374px;
     }
@@ -193,6 +195,9 @@
   .statistic {
     &__title {
       font-size: 42px;
+    }
+    &__subtitle {
+      margin: 20px auto;
     }
     &__main-container {
       flex-wrap: wrap;

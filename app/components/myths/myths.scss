@@ -1,14 +1,9 @@
 .myths {
-  padding: 128px 0;
+  padding: 128px 0 113px;
   background-color: #f0f4f7;
   &__title {
     max-width: 830px;
     margin: 0 auto;
-    font-size: 60px;
-    line-height: 1;
-    font-weight: 700;
-    color: #222222;
-    text-align: center;
   }
   &__items {
     width: 100%;
@@ -29,6 +24,9 @@
     &.-open-answer {
       max-height: unset;
       transition: 1s;
+      .myths__answer {
+        padding-top: 20px;
+      }
     }
   }
   &__button-show {
@@ -96,16 +94,15 @@
 @media all and (max-width: 1219px) {
   .myths {
     padding: 60px 0;
+    &__items {
+      margin-top: 40px;
+    }
   }
 }
 
 @media all and (max-width: 1023px) {
   .myths {
     padding: 60px 0;
-    &__title {
-      font-size: 52px;
-      line-height: 1.1;
-    }
     &__items {
       margin: 30px auto 0;
     }
