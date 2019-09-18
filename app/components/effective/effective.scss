@@ -259,6 +259,7 @@
       padding-top: 0;
     }
     &__component {
+      width: 38%;
       &.-first-row {
         margin-bottom: 60px;
       }
@@ -283,7 +284,7 @@
           width: 62px;
           height: 37px;
           background-size: cover;
-          left: 198px;
+          left: 154px;
           bottom: 62px;
         }
         p {
@@ -350,6 +351,7 @@
       margin-top: 20px;
     }
     &__component {
+      width: 50%;
       &.-first-row {
         margin-bottom: 20px;
       }
