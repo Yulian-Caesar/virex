@@ -368,3 +368,9 @@
     }
   }
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .effective__tablet-box {
+    height: 374px;
+  }
+}
