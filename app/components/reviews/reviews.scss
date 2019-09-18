@@ -22,7 +22,7 @@
         display: block;
       }
       .reviews-content__button:before {
-        content: "Скрить";
+        content: "Скрыть";
       }
     }
   }
@@ -202,11 +202,14 @@
     &-title {
       margin-bottom: 20px;
     }
+    &-wrap {
+      height: 325px;
+    }
     &-inner {
       padding: 10px 20px 10px 10px;
     }
     &-info {
-      max-width: 200px;
+      max-width: 220px;
       margin-right: 10px;
       &__img {
         max-width: 60px;
@@ -245,8 +248,9 @@
 @include r(767) {
   .reviews {
     &-info {
-      &__img {
-
+      max-width: 200px;
+      &__city {
+        font-size: 14px;
       }
     }
     &-content {
