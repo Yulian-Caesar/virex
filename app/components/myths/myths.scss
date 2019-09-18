@@ -22,7 +22,7 @@
     padding: 36px;
     background-color: #ffffff;
     &.-open-answer {
-      max-height: unset;
+      max-height: 100%;
       transition: 1s;
       .myths__answer {
         padding-top: 20px;
