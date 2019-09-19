@@ -3,8 +3,11 @@
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
 
+    let headerHeight = $(".header").height();
+    console.log(headerHeight);
+
     $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - 120
+        scrollTop: $($.attr(this, 'href')).offset().top - headerHeight - 10
     }, 1000);
 });
 

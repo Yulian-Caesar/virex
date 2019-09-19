@@ -1,6 +1,6 @@
 let mythsToggle = function () {
-    $(this).parents(".myths__item-box").toggleClass("-open-answer");
-    $(this).toggleClass("-minus");
+    $(this).toggleClass("-open-answer");
+    $(this).children(".myths__button-show").toggleClass("-minus");
 };
 
-$(document).on("click", ".myths__button-show", mythsToggle);
+$(document).on("click", ".myths__item-box", mythsToggle);

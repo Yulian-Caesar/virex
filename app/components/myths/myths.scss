@@ -16,16 +16,25 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-height: 100px;
-    overflow: hidden;
     margin-bottom: 15px;
     padding: 36px;
     background-color: #ffffff;
+    cursor: pointer;
+    &:last-child {
+      margin-bottom: 0;
+    }
     &.-open-answer {
       max-height: 100%;
       transition: 1s;
       .myths__answer {
-        padding-top: 20px;
+        display: block;
+      }
+    }
+    &:hover {
+      .myths__button-show:before,
+      .myths__button-show:after {
+        background: #fa861b;
+        outline: none;
       }
     }
   }
@@ -44,6 +53,7 @@
       background-image: linear-gradient(180.0deg, #393962 0%, #175088 100%);
       top: 12px;
       left: 1px;
+      transition: 0.4s;
     }
     &:after {
       display: block;
@@ -56,13 +66,6 @@
       top: 12px;
       left: 1px;
       transition: 0.4s;
-    }
-    &:hover {
-      &:before, &:after {
-        background: #fa861b;
-        transition: 0.6s;
-        outline: none;
-      }
     }
     &.-minus {
       &:after {
@@ -81,8 +84,9 @@
     text-align: left;
   }
   &__answer {
+    display: none;
     width: 100%;
-    padding-top: 38px;
+    padding-top: 20px;
     font-size: 20px;
     line-height: 28px;
     font-weight: 400;
@@ -116,11 +120,10 @@
 
 @media all and (max-width: 767px) {
   .myths {
-    &__title {
-      font-size: 33px;
+    &__items {
+      margin-top: 20px;
     }
     &__item-box {
-      max-height: 70px;
       &:first-child {
         padding: 21px 36px;
       }
@@ -131,10 +134,12 @@
     &__item-question {
       width: 87%;
       font-size: 18px;
+      line-height: 1.2;
     }
     &__answer {
-      padding-top: 25px;
+      padding-top: 10px;
       font-size: 17px;
+      line-height: 1.4;
     }
   }
 }
@@ -155,13 +160,7 @@
 @media all and (max-width: 479px) {
   .myths {
     &__item-box {
-      //max-height: 70px;
-      &:nth-child(2n+1) {
-        padding: 15px 10px 10px;
-      }
-      &:nth-child(2n+2) {
-        padding: 5px 10px 10px;
-      }
+      padding: 10px !important;
     }
     &__item-question {
       width: 100%;

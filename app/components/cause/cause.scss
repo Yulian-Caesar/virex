@@ -23,6 +23,7 @@
     max-width: 270px;
     background: #ffffff;
     padding: 40px 23px 35px;
+    transition: 1s;
     &:not(:first-child) {
       margin-left: 10px;
     }
@@ -57,7 +58,6 @@
     }
     &:hover {
       border-radius: 30px;
-      transition: 1s;
       .cause-item__img {
         &:after {
           width: 100%;
@@ -135,6 +135,9 @@
         &:after {
           bottom: -18px;
         }
+        &:after {
+          width: 17%;
+        }
         img {
           max-height: 50px;
         }
@@ -149,6 +152,18 @@
   }
 }
 
+@include r(767) {
+  .cause {
+    &-item {
+      &__img {
+        &:after {
+          width: 20%;
+        }
+      }
+    }
+  }
+}
+
 @include r(639) {
   .cause {
     &-subtitle {
@@ -156,6 +171,11 @@
     }
     &-item {
       padding: 20px 10px;
+      &__img {
+        &:after {
+          width: 28%;
+        }
+      }
     }
     &-conclusion {
       font-size: 16px;
@@ -173,6 +193,16 @@
       width: 100%;
       &:nth-child(n + 2) {
         margin-top: 20px;
+      }
+      &__img {
+        img {
+          margin: 0 auto;
+        }
+        &:after {
+          left: 50%;
+          transform: translateX(-50%);
+          width: 18%;
+        }
       }
     }
   }

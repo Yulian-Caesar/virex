@@ -200,8 +200,28 @@
       font-size: 54px;
       line-height: 1.1;
     }
+    &__component-name {
+      font-size: 22px;
+    }
+    &__main-component {
+      width: 520px;
+      height: 520px;
+    }
+    &__tablet-box {
+      width: 320px;
+      height: 320px;
+      min-height: 1px;
+      margin: 100px auto;
+      &:after {
+        left: 86px;
+      }
+      img {
+        max-width: 140px;
+      }
+    }
     &__title-description {
       font-size: 22px;
+      line-height: 1.3;
     }
     &__components-box {
       margin-top: 50px;
@@ -229,12 +249,18 @@
     &__title-description {
       max-width: 720px;
       text-align: center;
+      margin-right: 0;
     }
     &__main-components-box {
 
     }
     &__main-component {
       width: 420px;
+      height: 420px;
+    }
+    &__component-name {
+      font-size: 20px;
+      line-height: 1.1;
     }
     &__tablet-box {
       max-width: 320px;
@@ -253,6 +279,9 @@
         background-size: cover;
         bottom: -52px;
         left: 90px;
+      }
+      img {
+        max-width: 130px;
       }
     }
     &__components-box {
@@ -313,6 +342,7 @@
 
 @media all and (max-width: 767px) {
   .effective {
+    min-height: 740px;
     &__title {
       max-width: 766px;
       font-size: 40px;
@@ -321,6 +351,9 @@
     &__component-name {
       font-size: 20px;
       line-height: 1.1;
+    }
+    &__title-description {
+      font-size: 18px;
     }
     &__component-wrapper {
       &.-acid {
@@ -344,9 +377,6 @@
     &__title {
       font-size: 30px;
     }
-    &__title-description {
-
-    }
     &__components-box {
       margin-top: 20px;
     }
@@ -365,6 +395,36 @@
     }
     &__main-component {
       display: none;
+    }
+  }
+}
+
+@media all and (max-width: 479px) {
+  .effective {
+    &__components-box {
+      max-width: 300px;
+      margin: 20px auto 0;
+    }
+    &__title-description {
+      font-size: 16px;
+    }
+    &__component {
+      display: flex;
+      align-items: flex-end;
+    }
+    &__component-wrapper{
+      &.-arginin {
+        p {
+          display: flex;
+          align-items: center;
+          padding-top: 0;
+          min-height: 44px;
+          margin-top: 10px;
+        }
+      }
+      &.-right-side {
+        margin: 0 auto;
+      }
     }
   }
 }
