@@ -110,7 +110,8 @@
       content: "";
       width: 295px;
       height: 1.2px;
-      background-color: rgba(203, 210, 217, 0.6);
+      //background-color: rgba(203, 210, 217, 0.6);
+      background: red;
       z-index: 1;
     }
     &.-yacor {
@@ -121,7 +122,7 @@
       &:before {
         bottom: 46px;
         left: 102px;
-        width: 326px;
+        width: 341px;
       }
     }
     &.-nut {
@@ -130,7 +131,7 @@
       &:before {
         bottom: 29px;
         right: 141px;
-        width: 305px;
+        width: 303px;
       }
       p {
         max-width: 134px;
@@ -166,7 +167,7 @@
       &:before {
         bottom: 14px;
         right: 114px;
-        width: 318px;
+        width: 334px;
       }
       p {
         max-width: 124px;
